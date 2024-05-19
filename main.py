@@ -9,20 +9,31 @@ from collectible import Collectible
 
 WIDTH, HEIGHT = 800, 650
 FPS = 60
+move_count = 0
+
+pygame.init()
+pygame.display.init()
+pygame.font.init() 
 
 pygame.display.init()
 win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("game")
 clock = pygame.time.Clock()
 
+font = pygame.font.SysFont('Arial', 24)
+
 run = True
 
-def draw_window(win, board_group, player, enemies_group, collectibles):
-    win.fill((30,30,30))
+def draw_window(win, board_group, player, enemies_group, collectibles, move_count):
+    win.fill((30, 30, 30))
     board_group.draw(win)
     enemies_group.draw(win)
     collectibles.draw(win)
     win.blit(player.image, player.rect)
+
+    move_count_text = font.render(f'Ruchy: {move_count}', True, (255, 255, 255))
+    win.blit(move_count_text, (10, 10)) 
+
     pygame.display.update()
 
 def check_collision(player, enemies):
@@ -34,8 +45,6 @@ def check_collectibles(player, collectibles):
     collected = pygame.sprite.spritecollide(player, collectibles, True)
     if collected:
         print("Zebrałeś przedmiot!")
-
-
 
 maps = BoardMap()
 
@@ -65,7 +74,8 @@ while run:
             if event.button == 1:
                 current_cursor_pos = pygame.mouse.get_pos() - player.global_offset
                 row, cell, _ = maps.get_element_from_table(pygame.math.Vector2(current_cursor_pos))
-                player.move(row, cell)
+                if player.move(row, cell):
+                    move_count += 1
             if event.button == 3:
                 print(pygame.mouse.get_pos()[0])
 
@@ -78,7 +88,7 @@ while run:
     all_enemies.update(offset)
     collectibles.update(offset)
 
-    draw_window(win, board_wall, player, all_enemies, collectibles)
+    draw_window(win, board_wall, player, all_enemies, collectibles, move_count)
 
 pygame.quit()
     

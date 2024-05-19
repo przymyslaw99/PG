@@ -40,5 +40,6 @@ class Player(pygame.sprite.Sprite):
             self.dest_pos.x = coll * 30 + 15
             self.dest_pos.y = row * 30 + 15
             self.dest_pos += self.global_offset
+            return True
         else:
             print("nie dozowlone miejsce")
