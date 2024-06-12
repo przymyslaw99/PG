@@ -21,17 +21,30 @@ class Task():
             return False
 
     def get_task(self, nr):
-        task_book = { 1 : {"name" : "Tajemnicza skrzynia",
-                        "description": "Aby otworzyćpodełko znajdz złoty klucz",
-                        "requred": "key to box",
-                        "pieces": 1,
-                        "negative": "nie masz klucza aby otworzyć skrzynie" },
-                  2 : {"name": "Koszyk jabłek",
-                       "description": "zdobądz 5 jabłek i przynie je do maga",
-                       "requred": "jabłko",
-                       "pieces": 5,
-                       "negative": "jak będziesz maiła 5 jabłek przyjdź po nagodę"} }
-        
+        task_book = {
+            1: {
+                "name": "Tajemnicza skrzynia",
+                "description": "Aby otworzyćpodełko znajdz złoty klucz",
+                "requred": "key to box",
+                "pieces": 1,
+                "negative": "nie masz klucza aby otworzyć skrzynie"
+            },
+            2: {
+                "name": "Koszyk jabłek",
+                "description": "zdobądz 5 jabłek i przynie je do maga",
+                "requred": "jabłko",
+                "pieces": 5,
+                "negative": "jak będziesz maiła 5 jabłek przyjdź po nagodę"
+            },
+            3: {
+                "name": "Skradzione listy",
+                "description": "Dostarczyć skradzione listy do króla",
+                "requred": "stolen letters",
+                "pieces": 3,
+                "negative": "Nie masz skradzionych listów, aby ukończyć to zadanie"
+            }
+        }
+
         self.name = task_book[nr]["name"]
         self.description = task_book[nr]["description"]
         self.requred_object = task_book[nr]["requred"]
