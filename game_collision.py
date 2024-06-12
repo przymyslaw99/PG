@@ -38,7 +38,7 @@ class GameCollision:
                 player.equipment.append(collison[0])
                 collison[0].kill()
             elif collison[0].type == "elixir":
-                print("Zebrano eliksir")
+                print("Zebrano eliksir, zostałeś uleczony")
                 player.equipment.append(collison[0])
                 collison[0].kill()
             elif collison[0].type == "box":

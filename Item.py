@@ -36,7 +36,7 @@ class Item(pygame.sprite.Sprite):
                     "task": [[11, 2], [11, 3], [11, 4]],
                     "key" : [[8, 4],[9, 4]],
                     "apple": [[10, 3]],
-                    "elixir": [[8, 3]]
+                    "elixir": [[8, 3], [9,3]]
                     }
         
         sheet = pygame.image.load(os.path.join("assets", "objects", "Dungeon_item_props_v2.png"))

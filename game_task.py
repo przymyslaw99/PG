@@ -38,7 +38,7 @@ class Task():
             },
             3: {
                 "name": "Eliksir życia",
-                "description": "Znajdź magiczny eliksir i przekaż go uzdrowicielowi",
+                "description": "Znajdź magiczny eliksir aby się uleczyć",
                 "requred": "magic elixir",
                 "pieces": 1,
                 "negative": "Potrzebujesz magicznego eliksiru, aby ukończyć to zadanie"
