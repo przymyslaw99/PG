@@ -37,12 +37,12 @@ class Task():
                 "negative": "jak będziesz maiła 5 jabłek przyjdź po nagodę"
             },
             3: {
-                "name": "Skradzione listy",
-                "description": "Dostarczyć skradzione listy do króla",
-                "requred": "stolen letters",
-                "pieces": 3,
-                "negative": "Nie masz skradzionych listów, aby ukończyć to zadanie"
-            }
+                "name": "Eliksir życia",
+                "description": "Znajdź magiczny eliksir i przekaż go uzdrowicielowi",
+                "requred": "magic elixir",
+                "pieces": 1,
+                "negative": "Potrzebujesz magicznego eliksiru, aby ukończyć to zadanie"
+            },
         }
 
         self.name = task_book[nr]["name"]

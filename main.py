@@ -5,7 +5,7 @@ from player import Player
 from enemy import Enemy
 # from object_map import ObjectMap
 from sprite_animation import SpriteAnimation
-from item import Item
+from Item import Item
 from game_task import Task
 from game_collision import GameCollision
 
