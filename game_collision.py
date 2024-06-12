@@ -37,6 +37,10 @@ class GameCollision:
                 print("Zebrano jabłko")
                 player.equipment.append(collison[0])
                 collison[0].kill()
+            elif collison[0].type == "elixir":
+                print("Zebrano eliksir")
+                player.equipment.append(collison[0])
+                collison[0].kill()
             elif collison[0].type == "box":
                 if collison[0].task != None:
                     print("Skrzynia zawiera zadanie")

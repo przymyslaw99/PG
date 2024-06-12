@@ -66,6 +66,10 @@ key_1 = Item(15,17, "key")
 key_1.name = "key to box"
 items_on_map.add(key_1)
 
+elixir_1 = Item(5,5, "elixir")
+elixir_1.name = "elixir"
+items_on_map.add(elixir_1)
+
 
 sprite_img = pygame.image.load(os.path.join("assets", "objects", "torch.png"))
 animation_step = 6
